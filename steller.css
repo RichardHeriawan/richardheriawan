@@ -500,7 +500,7 @@ mark,
 
 code {
   font-size: 87.5%;
-  color: #FC8BC0;
+  color: #fc8bc0;
   word-break: break-word;
 }
 
@@ -7126,7 +7126,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #d4aa05 !important;
+  background-color: #fc8bc0 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
