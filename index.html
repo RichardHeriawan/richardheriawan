@@ -39,9 +39,9 @@
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#testmonial">Testmonial</a>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#blog">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -81,8 +81,12 @@
                 <p>The way to get started is to quit talking and begin doing.</p> 
 
                 <div class="buttons pt-3">
+                    <a href="#contact">
                     <button class="btn btn-primary rounded">HIRE ME</button>
+                    </a>
+                    <a href="assets/imgs/resume-richard.pdf" download>
                     <button class="btn btn-dark rounded">DOWNLOAD CV</button>
+                    </a>
                 </div>      
 
                 <div class="socials mt-4">
@@ -142,9 +146,9 @@
                         })();
                     </script>
                     <p>Looking for a highly skilled and enthusiastic programmer with a passion for problem-solving? Meet me - a data analytics expert with a knack for project management and report preparation, and a fluency in software fundamentals that includes everything from designing and developing algorithms to optimizing code maintainability. Whether working independently or as part of a team, I remain engaged, proactive, and positive, always taking full ownership of assignments and relentlessly pursuing the success of the entire group. </p>
-                    <a href="" download>
+                    <!-- <a href="assets/imgs/resume-richard.pdf" download>
                         <button class="btn btn-primary rounded mt-3">DOWNLOAD CV</button>
-                      </a>                
+                      </a>                 -->
                 </div>
             </div>
         </div>
@@ -427,10 +431,12 @@
                     <div class="row align-items-center">
                         <div class="col-sm-9 text-center text-sm-left">
                             <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">Accusantium labore nostrum similique quisquam.</p>
+                            <p class="mb-3"></p>
                         </div>
                         <div class="col-sm-3 text-center text-sm-right">
+                            <a href="#contact">
                             <button class="btn btn-light rounded">Hire Me!</button>
+                            </a>
                         </div>
                     </div>
                 </div> 
@@ -444,13 +450,14 @@
         <div class="container text-center">
             <h6 class="subtitle">Contact</h6>
             <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+            <p class="mb-5 pb-4">To access your preferred email, simply enter your login credentials - email and password.
+            </p>
 
             <div class="contact text-left">
                 <div class="form">
                     <h6 class="subtitle">Available 24/7</h6>
                     <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
+                    <form id="myForm">
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                         </div>
@@ -462,6 +469,33 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
                     </form>
+                    <script>
+                        function redirectToEmailProvider() {
+                            var email = document.getElementById("exampleInputEmail1").value;
+                            var domain = email.substring(email.lastIndexOf("@") + 1);
+                            
+                            switch (domain) {
+                                case "gmail.com":
+                                    window.location.href = "https://mail.google.com/";
+                                    break;
+                                case "yahoo.com":
+                                    window.location.href = "https://mail.yahoo.com/";
+                                    break;
+                                case "outlook.com":
+                                    window.location.href = "https://outlook.live.com/";
+                                    break;
+                                // add more cases for other email providers as needed
+                                default:
+                                    // handle unrecognized email domains here
+                                    break;
+                            }
+                        }
+                        
+                        document.getElementById("myForm").addEventListener("submit", function(e) {
+                            e.preventDefault();
+                            redirectToEmailProvider();
+                        });
+                    </script>
                 </div>
                 <div class="contact-infos">
                     <div class="item">
