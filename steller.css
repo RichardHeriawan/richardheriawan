@@ -11513,7 +11513,7 @@ pre {
   margin-right: -2rem;
 }
 
-/* @media (max-width: 991.98px) {
+@media (max-width: 100000.98px) {
   .header .container {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -11523,7 +11523,10 @@ pre {
   .header .container .infos {
     margin-top: 0;
   }
-} */
+  .header .container .img-holder {
+    display: none;
+  }
+}
 
 .header .widget {
   position: relative;
